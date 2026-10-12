@@ -1,0 +1,14 @@
+# Image prompts for the "Rain Sounds for Studying and Focus | 3 Hours" video.
+# One prompt per line. Generate 16:9 images (1920x1080) for the video background
+# and the same scene, cropped and with big text, for the thumbnail.
+
+# --- Background (calm, almost still, dark) ---
+A rainy window at night, soft warm lamp glow inside, raindrops running down the glass, blurred city lights outside, very calm, dark cinematic, 16:9
+Dense green forest in gentle rain, dark moody lighting, water drops on leaves, soft mist, no people, 16:9
+A cozy desk by a rainy window at night, open book, warm desk lamp, rain on the glass, peaceful study atmosphere, no text, 16:9
+A small tent in a quiet forest at night, rain falling, warm light glowing from inside, calm and dark, 16:9
+Rain falling on a still lake at dusk, soft ripples, distant treeline, deep blue tones, no people, 16:9
+
+# --- Thumbnail variants (same scenes, brighter, leave space on the left for text) ---
+Close-up of rain on a window at night with warm bokeh lights, bright and clear, empty space on the left side, 16:9
+Forest in heavy rain, vivid green, bright contrast, empty space on the left side for large text, 16:9
