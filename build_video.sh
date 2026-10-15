@@ -7,8 +7,9 @@
 #
 #   DIRECTOR_IMAGINI - folder cu imagini .jpg/.jpeg/.png (se iau în ordine alfabetică)
 #                      (poate fi și o singură imagine)
-#   ploaie.mp3       - sunet de ploaie (se repetă în buclă)
-#   muzica.mp3       - muzică ambientală (se repetă în buclă)
+#   ploaie.mp3       - sunet de ploaie (se repetă în buclă); pune - ca să nu ai ploaie
+#   muzica.mp3       - muzică ambientală (se repetă în buclă); poate fi și un folder
+#                      cu mai multe piese (.mp3/.wav/.m4a), puse una după alta
 #   secunde          - durata totală; implicit 10800 (3 ore)
 #   sec_per_imagine  - cât timp rămâne fiecare imagine; implicit 300 (5 minute)
 #
@@ -17,7 +18,7 @@
 set -euo pipefail
 
 if [ "$#" -lt 3 ]; then
-  sed -n '2,16p' "$0"
+  sed -n '2,18p' "$0"
   exit 1
 fi
 
@@ -61,16 +62,29 @@ else
     -c:v libx264 -preset veryfast -crf 28 -r 1 -t $((N * SEC)) "$LOOPCLIP"
 fi
 
-# Pasul 2: repetă slideshow-ul pe toată durata și adaugă audio (ploaie 100% + muzică 45%).
+# Muzică dintr-un folder: lipește piesele într-un singur fișier.
+if [ -d "$MUSIC" ]; then
+  : > "$TMP/list.txt"
+  while IFS= read -r f; do printf "file '%s'\n" "$(realpath "$f")" >> "$TMP/list.txt"; done \
+    < <(find "$MUSIC" -maxdepth 1 -type f \( -iname '*.mp3' -o -iname '*.wav' -o -iname '*.m4a' \) | sort)
+  [ -s "$TMP/list.txt" ] || { echo "Nu am găsit piese în $MUSIC" >&2; exit 1; }
+  ffmpeg -y -loglevel error -f concat -safe 0 -i "$TMP/list.txt" -c:a pcm_s16le -ar 44100 "$TMP/music.wav"
+  MUSIC="$TMP/music.wav"
+fi
+
+# Pasul 2: repetă slideshow-ul pe toată durata și adaugă audio.
+# Cu ploaie: ploaie 100% + muzică 45%. Fără ploaie ("-"): doar muzica.
+if [ "$RAIN" = "-" ]; then
+  AIN=(-stream_loop -1 -i "$MUSIC")
+  AFILTER="[1:a]volume=0.9,"
+else
+  AIN=(-stream_loop -1 -i "$RAIN" -stream_loop -1 -i "$MUSIC")
+  AFILTER="[1:a]volume=1.0[r];[2:a]volume=0.45[m];[r][m]amix=inputs=2:duration=longest:normalize=0,"
+fi
 ffmpeg -y -loglevel error -stats \
   -stream_loop -1 -t "$DUR" -i "$LOOPCLIP" \
-  -stream_loop -1 -i "$RAIN" \
-  -stream_loop -1 -i "$MUSIC" \
-  -filter_complex "\
-[1:a]volume=1.0[r];\
-[2:a]volume=0.45[m];\
-[r][m]amix=inputs=2:duration=longest:normalize=0,\
-afade=t=in:d=${FADE},afade=t=out:st=$((DUR - FADE)):d=${FADE}[a]" \
+  "${AIN[@]}" \
+  -filter_complex "${AFILTER}afade=t=in:d=${FADE},afade=t=out:st=$((DUR - FADE)):d=${FADE}[a]" \
   -map 0:v -map "[a]" \
   -c:v copy -c:a aac -b:a 192k -ar 44100 \
   -t "$DUR" -movflags +faststart "$OUT"
