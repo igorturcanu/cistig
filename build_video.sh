@@ -13,12 +13,17 @@
 #   secunde          - durata totală; implicit 10800 (3 ore)
 #   sec_per_imagine  - cât timp rămâne fiecare imagine; implicit 300 (5 minute)
 #
+# Mesaj de abonare (apare la început, la mijloc și la sfârșit):
+#   CHANNEL="Numele Canalului" ./build_video.sh ...   (implicit: "Canalul Meu")
+#   CTA_SECS=10   cât timp rămâne mesajul pe ecran (implicit 10 secunde, 0 = dezactivat)
+#   FONT=/cale/font.ttf   (opțional, dacă nu se găsește un font automat)
+#
 # Folosește doar audio și imagini pe care ai dreptul să le folosești
 # (create de tine, generate cu AI, licențiate sau libere de drepturi).
 set -euo pipefail
 
 if [ "$#" -lt 3 ]; then
-  sed -n '2,18p' "$0"
+  sed -n '2,24p' "$0"
   exit 1
 fi
 
@@ -26,6 +31,8 @@ SRC="$1"; RAIN="$2"; MUSIC="$3"
 OUT="${4:-ploaie_3_ore.mp4}"
 DUR="${5:-10800}"
 SEC="${6:-300}"
+CHANNEL="${CHANNEL:-Canalul Meu}"
+CTA_SECS="${CTA_SECS:-10}"
 FADE=5      # fade-in/out audio (secunde)
 XF=3        # durata tranziției dintre imagini (secunde)
 
@@ -81,12 +88,35 @@ else
   AIN=(-stream_loop -1 -i "$RAIN" -stream_loop -1 -i "$MUSIC")
   AFILTER="[1:a]volume=1.0[r];[2:a]volume=0.45[m];[r][m]amix=inputs=2:duration=longest:normalize=0,"
 fi
+# Mesajul de abonare: la început, la mijloc și la sfârșit.
+VFILTER="[0:v]null[v]"
+if [ "$CTA_SECS" -gt 0 ]; then
+  FONTFILE="${FONT:-}"
+  if [ -z "$FONTFILE" ]; then
+    for f in /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf \
+             /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf \
+             /usr/share/fonts/TTF/DejaVuSans-Bold.ttf \
+             /usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf \
+             /System/Library/Fonts/Supplemental/Arial\ Bold.ttf \
+             /Library/Fonts/Arial\ Bold.ttf \
+             C:/Windows/Fonts/arialbd.ttf; do
+      [ -f "$f" ] && FONTFILE="$f" && break
+    done
+  fi
+  printf 'ABONEAZĂ-TE  •  SUBSCRIBE\nDă LIKE și activează clopoțelul\n%s\n' "$CHANNEL" > "$TMP/cta.txt"
+  MID=$((DUR / 2 - CTA_SECS / 2)); END=$((DUR - CTA_SECS - FADE))
+  EN="between(t,0,${CTA_SECS})+between(t,${MID},$((MID + CTA_SECS)))+between(t,${END},$((END + CTA_SECS)))"
+  FONTOPT=""; [ -n "$FONTFILE" ] && FONTOPT="fontfile='${FONTFILE//:/\\:}':"
+  VFILTER="[0:v]drawtext=${FONTOPT}textfile='$TMP/cta.txt':fontcolor=white:fontsize=64:line_spacing=18:\
+x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.55:boxborderw=40:enable='${EN}'[v]"
+fi
+
 ffmpeg -y -loglevel error -stats \
   -stream_loop -1 -t "$DUR" -i "$LOOPCLIP" \
   "${AIN[@]}" \
-  -filter_complex "${AFILTER}afade=t=in:d=${FADE},afade=t=out:st=$((DUR - FADE)):d=${FADE}[a]" \
-  -map 0:v -map "[a]" \
-  -c:v copy -c:a aac -b:a 192k -ar 44100 \
+  -filter_complex "${VFILTER};${AFILTER}afade=t=in:d=${FADE},afade=t=out:st=$((DUR - FADE)):d=${FADE}[a]" \
+  -map "[v]" -map "[a]" \
+  -c:v libx264 -preset veryfast -tune stillimage -crf 28 -r 1 -c:a aac -b:a 192k -ar 44100 \
   -t "$DUR" -movflags +faststart "$OUT"
 
 echo "Gata: $OUT ($N imagini, ${DUR}s)"
