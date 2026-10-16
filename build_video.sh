@@ -14,7 +14,9 @@
 #   sec_per_imagine  - cât timp rămâne fiecare imagine; implicit 300 (5 minute)
 #
 # Mesaj de abonare (apare la început, la mijloc și la sfârșit):
-#   CHANNEL="Numele Canalului" ./build_video.sh ...   (implicit: "Canalul Meu")
+#   Butoanele (SUBSCRIBE/LIKE/SHARE) vin din assets/cta.png; creează-le cu:
+#     python3 make_cta.py --channel "Numele Canalului" --logo logo.jpg
+#   Fără acel fișier se afișează un text simplu cu CHANNEL="Numele Canalului".
 #   CTA_SECS=10   cât timp rămâne mesajul pe ecran (implicit 10 secunde, 0 = dezactivat)
 #   FONT=/cale/font.ttf   (opțional, dacă nu se găsește un font automat)
 #
@@ -89,8 +91,18 @@ else
   AFILTER="[1:a]volume=1.0[r];[2:a]volume=0.45[m];[r][m]amix=inputs=2:duration=longest:normalize=0,"
 fi
 # Mesajul de abonare: la început, la mijloc și la sfârșit.
+# Dacă există imaginea cu butoane (assets/cta.png, creată cu make_cta.py), se folosește ea;
+# altfel se afișează un text simplu.
+CTA_IMG="${CTA_IMAGE:-$(dirname "$(realpath "$0")")/assets/cta.png}"
+MID=$((DUR / 2 - CTA_SECS / 2)); END=$((DUR - CTA_SECS - FADE))
+EN="between(t,0,${CTA_SECS})+between(t,${MID},$((MID + CTA_SECS)))+between(t,${END},$((END + CTA_SECS)))"
 VFILTER="[0:v]null[v]"
-if [ "$CTA_SECS" -gt 0 ]; then
+EXTRA=()
+if [ "$CTA_SECS" -gt 0 ] && [ -f "$CTA_IMG" ]; then
+  CTA_IDX=$(( ${#AIN[@]} / 4 + 1 ))
+  EXTRA=(-loop 1 -framerate 1 -i "$CTA_IMG")
+  VFILTER="[${CTA_IDX}:v]format=rgba[cta];[0:v][cta]overlay=0:0:enable='${EN}'[v]"
+elif [ "$CTA_SECS" -gt 0 ]; then
   FONTFILE="${FONT:-}"
   if [ -z "$FONTFILE" ]; then
     for f in /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf \
@@ -104,8 +116,6 @@ if [ "$CTA_SECS" -gt 0 ]; then
     done
   fi
   printf 'ABONEAZĂ-TE  •  SUBSCRIBE\nDă LIKE și activează clopoțelul\n%s\n' "$CHANNEL" > "$TMP/cta.txt"
-  MID=$((DUR / 2 - CTA_SECS / 2)); END=$((DUR - CTA_SECS - FADE))
-  EN="between(t,0,${CTA_SECS})+between(t,${MID},$((MID + CTA_SECS)))+between(t,${END},$((END + CTA_SECS)))"
   FONTOPT=""; [ -n "$FONTFILE" ] && FONTOPT="fontfile='${FONTFILE//:/\\:}':"
   VFILTER="[0:v]drawtext=${FONTOPT}textfile='$TMP/cta.txt':fontcolor=white:fontsize=64:line_spacing=18:\
 x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.55:boxborderw=40:enable='${EN}'[v]"
@@ -114,6 +124,7 @@ fi
 ffmpeg -y -loglevel error -stats \
   -stream_loop -1 -t "$DUR" -i "$LOOPCLIP" \
   "${AIN[@]}" \
+  ${EXTRA[@]+"${EXTRA[@]}"} \
   -filter_complex "${VFILTER};${AFILTER}afade=t=in:d=${FADE},afade=t=out:st=$((DUR - FADE)):d=${FADE}[a]" \
   -map "[v]" -map "[a]" \
   -c:v libx264 -preset veryfast -tune stillimage -crf 28 -r 1 -c:a aac -b:a 192k -ar 44100 \
