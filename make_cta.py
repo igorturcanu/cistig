@@ -106,7 +106,7 @@ def pill(img, d, x, y, h, label, fill, fg, icon):
     return w
 
 
-def avatar(logo, size):
+def avatar(logo, size, ring=False):
     im = Image.open(logo).convert("RGB")
     s = min(im.size)
     im = im.crop(((im.width - s) // 2, (im.height - s) // 2, (im.width + s) // 2, (im.height + s) // 2))
@@ -115,8 +115,8 @@ def avatar(logo, size):
     ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
     out = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     out.paste(im, (0, 0), mask)
-    ring = ImageDraw.Draw(out)
-    ring.ellipse((0, 0, size - 1, size - 1), outline=(255, 255, 255, 255), width=max(3, size // 28))
+    if ring:
+        ImageDraw.Draw(out).ellipse((0, 0, size - 1, size - 1), outline=(255, 255, 255, 255), width=max(3, size // 28))
     return out
 
 
@@ -125,6 +125,7 @@ def main():
     ap.add_argument("--channel", default="Canalul Meu")
     ap.add_argument("--tagline", default="Subscribe, Like & Share with friends")
     ap.add_argument("--logo", help="imagine pentru avatarul rotund (se decupează pătrat)")
+    ap.add_argument("--ring", action="store_true", help="adaugă un inel alb în jurul avatarului")
     ap.add_argument("--out", default="assets/cta.png")
     a = ap.parse_args()
 
@@ -158,7 +159,7 @@ def main():
     x = (W * S - total) // 2
 
     if a.logo:
-        img.alpha_composite(avatar(a.logo, av), (x, row_y + (h - av) // 2))
+        img.alpha_composite(avatar(a.logo, av, a.ring), (x, row_y + (h - av) // 2))
         x += av + gap
     red, white, black = (232, 62, 38, 255), (250, 250, 250, 255), (20, 20, 20, 255)
     x += pill(img, d, x, row_y, h, "SUBSCRIBE", red, (255, 255, 255, 255), "bell") + gap
