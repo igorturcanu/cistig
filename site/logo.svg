@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="Madi Popescu – Roemeens–Nederlands tolk en vertaler">
+  <title>Madi Popescu</title>
+  <!-- twee spraakballonnen: Roemeens (geel/blauw) en Nederlands (oranje) -->
+  <path d="M10 14h46a8 8 0 0 1 8 8v28a8 8 0 0 1-8 8H30l-12 12v-12h-8a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z" fill="#1f4e8c"/>
+  <path d="M40 34h46a8 8 0 0 1 8 8v28a8 8 0 0 1-8 8h-8v12L66 78H40a8 8 0 0 1-8-8V42a8 8 0 0 1 8-8z" fill="#e8742a" opacity=".95"/>
+  <text x="37" y="47" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">M</text>
+  <text x="63" y="67" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">P</text>
+  <text x="112" y="50" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#1f4e8c">Madi Popescu</text>
+  <text x="114" y="74" font-family="system-ui,sans-serif" font-size="14" letter-spacing="1.5" fill="#5b6475">ROEMEENS · NEDERLANDS</text>
+</svg>

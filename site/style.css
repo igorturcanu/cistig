@@ -5,7 +5,8 @@ body{margin:0;font:17px/1.6 system-ui,sans-serif;background:var(--bg);color:var(
 .wrap{max-width:960px;margin:0 auto;padding:0 16px}
 .top{border-bottom:1px solid var(--alt);position:sticky;top:0;background:var(--bg)}
 .bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:12px;padding-bottom:12px}
-.logo{font-weight:700;color:var(--fg);text-decoration:none}
+.logo{display:flex;align-items:center}
+.logo img{display:block;height:44px;width:auto}
 nav a{margin-left:16px;color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--accent)}
 .hero{background:var(--alt);padding:64px 0}
