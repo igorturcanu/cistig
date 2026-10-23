@@ -5,81 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Madi Popescu – Roemeens–Nederlands tolk en vertaler</title>
   <meta name="description" content="Tolk- en vertaaldiensten Roemeens–Nederlands voor rechtbanken, advocaten, politie, gemeenten en particulieren.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
     <div class="wrap bar">
-      <a class="logo" href="#"><img src="logo.svg" alt="Madi Popescu" height="44"></a>
-      <div class="contact-top">
-        <a href="tel:+31653649844">+31 6 53649844</a>
-        <a href="mailto:madi.tolk@gmail.com">madi.tolk@gmail.com</a>
-      </div>
-      <nav>
+      <a class="logo" href="#top"><img src="logo.svg" alt="Madi Popescu" height="48"></a>
+      <nav aria-label="Hoofdmenu">
         <a href="#diensten">Diensten</a>
         <a href="#werkwijze">Werkwijze</a>
-        <a href="#over">Over mij</a>
+        <a href="#over-mij">Over mij</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="wrap">
-        <h1>Roemeens–Nederlands tolk en vertaler</h1>
-        <p>Nauwkeurig, onpartijdig en vertrouwelijk. Voor rechtbanken, advocaten, politie, gemeenten en particulieren.</p>
-        <a class="btn" href="#contact">Vraag een offerte aan</a>
+        <p class="eyebrow">Tolk en vertaler</p>
+        <h1>Roemeens–Nederlands, nauwkeurig en onpartijdig</h1>
+        <p class="lead">Voor rechtbanken, advocaten, politie, gemeenten en particulieren.</p>
+        <a class="btn" href="#contact">Neem contact op</a>
       </div>
     </section>
 
-    <section id="diensten" class="wrap">
-      <h2>Diensten</h2>
-      <div class="cards">
-        <article>
-          <h3>Tolken</h3>
-          <p>Ter plaatse, telefonisch of via video, bijvoorbeeld bij zittingen, verhoren, gesprekken met een advocaat en zorg- of gemeentelijke afspraken.</p>
-        </article>
-        <article>
-          <h3>Vertalen</h3>
-          <p>Vertaling van officiële documenten: akten, uittreksels, diploma's, vonnissen, dagvaardingen en contracten, Roemeens ⇄ Nederlands.</p>
-        </article>
-        <article>
-          <h3>Gerechtelijke opdrachten</h3>
-          <p>Ervaring met juridische terminologie en het strikte gedrag dat van een tolk in een juridische setting wordt verwacht.</p>
-        </article>
+    <section id="diensten" class="section">
+      <div class="wrap">
+        <h2>Diensten</h2>
+        <div class="cols">
+          <article>
+            <h3>Tolken</h3>
+            <p>Tolken ter plaatse, telefonisch of via een videoverbinding, bijvoorbeeld bij zittingen, verhoren, gesprekken met een advocaat en afspraken bij gemeenten of in de zorg.</p>
+          </article>
+          <article>
+            <h3>Vertalen</h3>
+            <p>Vertaling van officiële documenten, zoals akten, uittreksels, diploma’s, vonnissen, dagvaardingen en contracten, van het Roemeens naar het Nederlands en andersom.</p>
+          </article>
+          <article>
+            <h3>Juridische opdrachten</h3>
+            <p>Aandacht voor juridische terminologie en voor de onpartijdige houding die van een tolk in een juridische context wordt verwacht.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="werkwijze" class="alt">
+    <section id="werkwijze" class="section tint">
       <div class="wrap">
         <h2>Werkwijze</h2>
-        <ol>
-          <li><strong>Aanvraag</strong> – u mailt of belt met de opdracht, de datum en de taalcombinatie.</li>
-          <li><strong>Offerte</strong> – u ontvangt een duidelijk tarief vooraf.</li>
-          <li><strong>Uitvoering</strong> – de opdracht wordt nauwkeurig en onpartijdig uitgevoerd.</li>
-          <li><strong>Vertrouwelijkheid</strong> – alle informatie blijft strikt geheim.</li>
+        <ol class="steps">
+          <li>
+            <h3>Aanvraag</h3>
+            <p>U stuurt de opdracht door, met de datum, de plaats en de taalcombinatie.</p>
+          </li>
+          <li>
+            <h3>Offerte</h3>
+            <p>U ontvangt vooraf een duidelijk tarief.</p>
+          </li>
+          <li>
+            <h3>Uitvoering</h3>
+            <p>De opdracht wordt nauwkeurig en onpartijdig uitgevoerd.</p>
+          </li>
         </ol>
+        <p class="note">Alle informatie wordt strikt vertrouwelijk behandeld.</p>
       </div>
     </section>
 
-    <section id="over" class="wrap">
-      <h2>Over mij</h2>
-      <p>[Korte tekst over opleiding, ervaring en registratie. Vermeld hier alleen wat klopt, bijvoorbeeld inschrijving in het Rtv (Register tolken en vertalers) zodra dit van toepassing is, met uw inschrijfnummer.]</p>
+    <section id="over-mij" class="section">
+      <div class="wrap split">
+        <h2>Over mij</h2>
+        <div>
+          <p>Madi Popescu is tolk en vertaler in de combinatie Roemeens–Nederlands en richt zich op juridische en officiële opdrachten.</p>
+          <p>Zij hecht grote waarde aan nauwkeurigheid, onpartijdigheid en vertrouwelijkheid.</p>
+          <!-- Nog toe te voegen: opleiding, ervaring en, zodra van toepassing, inschrijving in het Rtv met inschrijfnummer. -->
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="alt">
-      <div class="wrap">
+    <section id="contact" class="contact">
+      <div class="wrap split">
         <h2>Contact</h2>
-        <p>E-mail: <a href="mailto:madi.tolk@gmail.com">madi.tolk@gmail.com</a><br>
-        Telefoon: +31 6 53649844<br>
-        KvK-nummer: [invullen]</p>
+        <dl>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:madi.tolk@gmail.com">madi.tolk@gmail.com</a></dd>
+          <dt>Telefoon</dt>
+          <dd><a href="tel:+31653649844">+31 6 53649844</a></dd>
+          <!-- KvK-nummer toevoegen zodra beschikbaar. -->
+        </dl>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© <span id="y"></span> Madi Popescu · Alle rechten voorbehouden</div>
+    <div class="wrap">© <span id="y">2026</span> Madi Popescu</div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
