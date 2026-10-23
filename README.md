@@ -19,3 +19,9 @@ De map `sites/<naam>/` is een gewone statische website zonder build-stap. Hij ka
 ## Factuur
 
 Elke site bevat ook `factuur.html`: een factuur die de klant zelf invult, met automatische berekening van het bedrag, de BTW en de uiterste betaaldatum, en een kant-en-klare e-mailtekst. "Opslaan als PDF" gebruikt de afdrukfunctie van de browser. Adres, BTW-nummer en IBAN worden alleen in de browser van de gebruiker onthouden en staan dus niet in dit (openbare) repo. De pagina is niet gelinkt vanaf de website en staat op `noindex`; de bezoeker kan haar alleen openen als hij het adres kent.
+
+### GitHub Pages
+
+Bij elke wijziging in `sites/` op `master` publiceert `.github/workflows/pages.yml` de map `sites/`. Eenmalig: Settings → Pages → Source → **GitHub Actions**. Het adres van een klant is daarna `https://igorturcanu.github.io/cistig/<naam>/`, bijvoorbeeld `/madi-popescu/`.
+
+Het repo is openbaar: alles in `clients/` en `sites/` is voor iedereen leesbaar. Zet daar alleen gegevens in die de klant op de website wil tonen.
