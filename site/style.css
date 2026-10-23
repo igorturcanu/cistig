@@ -20,3 +20,7 @@ section.wrap{padding-left:16px;padding-right:16px}
 .cards article{border:1px solid var(--alt);border-radius:8px;padding:20px}
 a{color:var(--accent)}
 footer{padding:24px 0;color:var(--muted);text-align:center}
+.contact-top{display:flex;gap:16px;flex-wrap:wrap;font-size:.9rem}
+.contact-top a{color:var(--muted);text-decoration:none}
+.contact-top a:hover{color:var(--accent)}
+@media (prefers-color-scheme:dark){.logo img{background:#fff;border-radius:6px;padding:2px 6px}}
