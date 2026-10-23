@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="Madi Popescu">
+  <title>Madi Popescu</title>
+  <!-- brug tussen twee oevers: verbinding tussen twee talen -->
+  <rect x="6" y="62" width="14" height="22" fill="#2b6a4f"/>
+  <rect x="70" y="62" width="14" height="22" fill="#c8553d"/>
+  <path d="M13 62C13 24 77 24 77 62" fill="none" stroke="#1f4e8c" stroke-width="6" stroke-linecap="round"/>
+  <line x1="6" y1="62" x2="84" y2="62" stroke="#1f4e8c" stroke-width="6"/>
+  <text x="104" y="52" font-family="system-ui,sans-serif" font-size="32" font-weight="700" fill="#1d2433">Madi Popescu</text>
+  <text x="106" y="76" font-family="system-ui,sans-serif" font-size="14" letter-spacing="1.5" fill="#5b6475">ROEMEENS ⇄ NEDERLANDS</text>
+</svg>
