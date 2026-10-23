@@ -22,7 +22,6 @@
     .sheet{max-width:860px;margin:0 auto 24px;background:#fff;padding:40px max(24px,env(safe-area-inset-left,0px));border-top:4px solid var(--navy)}
     h1,h2{font-family:var(--serif);font-weight:500;color:var(--navy);margin:0}
     h1{font-size:2.2rem;line-height:1.1}
-    h1 em{color:var(--gold)}
     h2{font-size:1.15rem;margin-bottom:6px}
     .head{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--rule)}
     .head .role{color:var(--muted);margin:4px 0 0}

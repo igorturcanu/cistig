@@ -36,10 +36,7 @@ def main(path):
     role = d["role"]
     languages = f'{d["lang_a"]}–{d["lang_b"]}'
     about = "\n          ".join(f"<p>{esc(p)}</p>" for p in d["about"])
-    parts = name.split()
-    first = d.get("name_first", " ".join(parts[:-1]))
-    last = d.get("name_last", parts[-1])
-    name_html = f"{esc(first)} <em>{esc(last)}</em>" if first else f"<em>{esc(last)}</em>"
+    name_html = esc(name)
     navy, gold = d.get("navy", "#14304f"), d.get("gold", "#b08d3c")
     theme_css = f":root{{--navy:{navy};--gold:{gold}}}" if (navy, gold) != ("#14304f", "#b08d3c") else ""
 

@@ -1,4 +1,4 @@
-/* Klassiek en ingetogen: een donkere hoofdkleur, één accentkleur voor dunne lijnen en de achternaam. */
+/* Klassiek en ingetogen: een donkere hoofdkleur, één accentkleur voor dunne lijnen. */
 :root{
   --navy:#14304f;
   --gold:#b08d3c;
@@ -40,7 +40,6 @@ nav .nav-cta:hover{background:var(--gold);color:var(--navy)}
 .hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
 .eyebrow{margin:0 0 1rem;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
 .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:500;color:#fff;letter-spacing:-.01em}
-.hero h1 em{color:var(--gold-light);font-weight:500}
 .pair{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:#dbe3ee;margin:.5rem 0 0}
 .pair::after{content:"";display:block;width:64px;height:2px;background:var(--gold);margin:1.5rem 0}
 .lead{font-size:1.15rem;color:#dbe3ee;max-width:48ch}
