@@ -6,11 +6,11 @@ Eén sjabloon (`template/`) en per klant een klein bestand in `clients/`. Het sc
 
 1. Kopieer `clients/madi-popescu.json` naar `clients/<naam>.json`.
 2. Pas de velden aan: `name`, `initials`, `role`, `lang_a`, `lang_b`, `email`, `phone`, `about`.
-   Optioneel: `kvk`, `rtv` (komen in het contactblok), `role_short`, `lang_codes`.
+   Optioneel: `kvk`, `rtv` (komen in het blok "Registratie"), `role_short`, `lang_codes`, `facts` (het blok "In het kort"), `name_first` en `name_last` (de achternaam staat cursief en in accentkleur), `navy` en `gold` (andere kleuren).
 3. Draai `python3 build.py clients/<naam>.json`.
 4. De map `sites/<naam>/` bevat alles: `index.html`, `style.css`, `logo.svg`, `logo-contact.svg`, `visitekaartje.svg`.
 
-Controleer `about` altijd zelf op spelling en op wat de klant werkelijk mag vermelden. Gebruik alleen "beëdigd" als de klant in het Rtv staat ingeschreven.
+De teksten zijn geschreven in de ik-vorm. Controleer `about` altijd zelf op spelling en op wat de klant werkelijk mag vermelden. Gebruik alleen "beëdigd" als de klant in het Rtv staat ingeschreven.
 
 ## Online zetten
 

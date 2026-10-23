@@ -36,11 +36,27 @@ def main(path):
     role = d["role"]
     languages = f'{d["lang_a"]}–{d["lang_b"]}'
     about = "\n          ".join(f"<p>{esc(p)}</p>" for p in d["about"])
-    extra = ""
-    if d.get("kvk"):
-        extra += f'          <dt>KvK</dt>\n          <dd>{esc(d["kvk"])}</dd>\n'
+    parts = name.split()
+    first = d.get("name_first", " ".join(parts[:-1]))
+    last = d.get("name_last", parts[-1])
+    name_html = f"{esc(first)} <em>{esc(last)}</em>" if first else f"<em>{esc(last)}</em>"
+    navy, gold = d.get("navy", "#14304f"), d.get("gold", "#b08d3c")
+    theme_css = f":root{{--navy:{navy};--gold:{gold}}}" if (navy, gold) != ("#14304f", "#b08d3c") else ""
+
+    def rows(items, indent):
+        return "".join(f'{indent}<dt>{esc(k)}</dt>\n{indent}<dd>{esc(v)}</dd>\n' for k, v in items)
+
+    facts = d.get("facts") or [
+        ("Beroep", role[:1].upper() + role[1:]),
+        ("Taalcombinatie", languages),
+        ("Voor", "Rechtbanken, advocaten, politie, gemeenten en particulieren"),
+        ("Uitgangspunt", "Nauwkeurig, onpartijdig en strikt vertrouwelijk"),
+    ]
+    reg = [("Beroep", role[:1].upper() + role[1:]), ("Taalcombinatie", languages)]
     if d.get("rtv"):
-        extra += f'          <dt>Rtv</dt>\n          <dd>{esc(d["rtv"])}</dd>\n'
+        reg.append(("Rtv-inschrijfnummer", d["rtv"]))
+    if d.get("kvk"):
+        reg.append(("KvK-nummer", d["kvk"]))
     phone = d["phone"]
     v = {
         "name": esc(name),
@@ -57,7 +73,12 @@ def main(path):
         "phone": esc(phone),
         "phone_tel": re.sub(r"[^+\d]", "", phone),
         "about_html": about,
-        "extra_contact": extra,
+        "name_html": name_html,
+        "facts_html": rows(facts, " " * 12),
+        "reg_html": rows(reg, " " * 14),
+        "theme_css": theme_css,
+        "navy": navy,
+        "gold": "#d9a441" if gold == "#b08d3c" else gold,
         "name_size_logo": str(fit(name, 32, 246)),
         "name_size_contact": str(fit(name, 35, 278)),
         "name_size_card": str(fit(name, 64, 570)),
