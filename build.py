@@ -2,7 +2,7 @@
 """Genereert een website, logo en visitekaartje uit template/ en een klantbestand.
 
 Gebruik:  python3 build.py clients/madi-popescu.json
-Resultaat: sites/<naam>/  (index.html, style.css, logo.svg, logo-contact.svg, visitekaartje.svg)
+Resultaat: sites/<naam>/  (index.html, factuur.html, style.css, logo.svg, logo-contact.svg, visitekaartje.svg)
 """
 import html, json, re, sys
 from pathlib import Path
@@ -77,6 +77,10 @@ def main(path):
         "facts_html": rows(facts, " " * 12),
         "reg_html": rows(reg, " " * 14),
         "theme_css": theme_css,
+        "kvk_value": esc(d.get("kvk", "")),
+        "rtv_value": esc(d.get("rtv", "")),
+        "name_js": json.dumps(name).replace("</", "<\\/"),
+        "phone_js": json.dumps(phone).replace("</", "<\\/"),
         "navy": navy,
         "gold": "#d9a441" if gold == "#b08d3c" else gold,
         "name_size_logo": str(fit(name, 32, 246)),
@@ -87,6 +91,7 @@ def main(path):
     out.mkdir(parents=True, exist_ok=True)
     files = {
         "index.html.tpl": "index.html",
+        "factuur.html.tpl": "factuur.html",
         "logo.svg.tpl": "logo.svg",
         "logo-contact.svg.tpl": "logo-contact.svg",
         "visitekaartje.svg.tpl": "visitekaartje.svg",

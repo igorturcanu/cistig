@@ -15,3 +15,7 @@ De teksten zijn geschreven in de ik-vorm. Controleer `about` altijd zelf op spel
 ## Online zetten
 
 De map `sites/<naam>/` is een gewone statische website zonder build-stap. Hij kan op elke gratis statische hosting (GitHub Pages, Netlify, Cloudflare Pages) en is daarna voor iedereen te openen zonder account.
+
+## Factuur
+
+Elke site bevat ook `factuur.html`: een factuur die de klant zelf invult, met automatische berekening van het bedrag, de BTW en de uiterste betaaldatum, en een kant-en-klare e-mailtekst. "Opslaan als PDF" gebruikt de afdrukfunctie van de browser. Adres, BTW-nummer en IBAN worden alleen in de browser van de gebruiker onthouden en staan dus niet in dit (openbare) repo. De pagina is niet gelinkt vanaf de website en staat op `noindex`; de bezoeker kan haar alleen openen als hij het adres kent.
