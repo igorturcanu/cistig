@@ -1,2 +1,17 @@
-# cistig
-https://riw.su/21665
+# Websites voor tolken en vertalers
+
+Eén sjabloon (`template/`) en per klant een klein bestand in `clients/`. Het script maakt daarvan een website, een logo en een visitekaartje.
+
+## Een nieuwe klant toevoegen
+
+1. Kopieer `clients/madi-popescu.json` naar `clients/<naam>.json`.
+2. Pas de velden aan: `name`, `initials`, `role`, `lang_a`, `lang_b`, `email`, `phone`, `about`.
+   Optioneel: `kvk`, `rtv` (komen in het contactblok), `role_short`, `lang_codes`.
+3. Draai `python3 build.py clients/<naam>.json`.
+4. De map `sites/<naam>/` bevat alles: `index.html`, `style.css`, `logo.svg`, `logo-contact.svg`, `visitekaartje.svg`.
+
+Controleer `about` altijd zelf op spelling en op wat de klant werkelijk mag vermelden. Gebruik alleen "beëdigd" als de klant in het Rtv staat ingeschreven.
+
+## Online zetten
+
+De map `sites/<naam>/` is een gewone statische website zonder build-stap. Hij kan op elke gratis statische hosting (GitHub Pages, Netlify, Cloudflare Pages) en is daarna voor iedereen te openen zonder account.

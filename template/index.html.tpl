@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Madi Popescu – Roemeens–Nederlands tolk en vertaler</title>
-  <meta name="description" content="Tolk- en vertaaldiensten Roemeens–Nederlands voor rechtbanken, advocaten, politie, gemeenten en particulieren.">
+  <title>{{name}} – {{role_cap}}</title>
+  <meta name="description" content="Tolk- en vertaaldiensten {{languages}} voor rechtbanken, advocaten, politie, gemeenten en particulieren.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap">
@@ -13,7 +13,7 @@
 <body>
   <header class="top">
     <div class="wrap bar">
-      <a class="logo" href="#top"><img src="logo.svg" alt="Madi Popescu" height="48"></a>
+      <a class="logo" href="#top"><img src="logo.svg" alt="{{name}}" height="48"></a>
       <nav aria-label="Hoofdmenu">
         <a href="#diensten">Diensten</a>
         <a href="#werkwijze">Werkwijze</a>
@@ -26,8 +26,8 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">Beëdigd tolk en vertaler</p>
-        <h1>Roemeens–Nederlands, nauwkeurig en onpartijdig</h1>
+        <p class="eyebrow">{{role_cap}}</p>
+        <h1>{{languages}}, nauwkeurig en onpartijdig</h1>
         <p class="lead">Voor rechtbanken, advocaten, politie, gemeenten en particulieren.</p>
         <a class="btn" href="#contact">Neem contact op</a>
       </div>
@@ -43,7 +43,7 @@
           </article>
           <article>
             <h3>Vertalen</h3>
-            <p>Vertaling van officiële documenten, zoals akten, uittreksels, diploma’s, vonnissen, dagvaardingen en contracten, van het Roemeens naar het Nederlands en andersom.</p>
+            <p>Vertaling van officiële documenten, zoals akten, uittreksels, diploma’s, vonnissen, dagvaardingen en contracten, van het {{lang_a}} naar het {{lang_b}} en andersom.</p>
           </article>
           <article>
             <h3>Juridische opdrachten</h3>
@@ -78,8 +78,7 @@
       <div class="wrap split">
         <h2>Over mij</h2>
         <div>
-          <p>Mijn naam is Madi Popescu en ik ben beëdigd tolk en vertaler in de taalcombinatie Nederlands–Roemeens.</p>
-          <p>Ik richt me op juridische en officiële opdrachten en hecht grote waarde aan nauwkeurigheid, onpartijdigheid en vertrouwelijkheid.</p>
+          {{about_html}}
           <!-- Nog toe te voegen: opleiding, ervaring en, zodra van toepassing, inschrijving in het Rtv met inschrijfnummer. -->
         </div>
       </div>
@@ -90,17 +89,16 @@
         <h2>Contact</h2>
         <dl>
           <dt>E-mail</dt>
-          <dd><a href="mailto:madi.tolk@gmail.com">madi.tolk@gmail.com</a></dd>
+          <dd><a href="mailto:{{email}}">{{email}}</a></dd>
           <dt>Telefoon</dt>
-          <dd><a href="tel:+31653649844">+31 6 53649844</a></dd>
-          <!-- KvK-nummer toevoegen zodra beschikbaar. -->
-        </dl>
+          <dd><a href="tel:{{phone_tel}}">{{phone}}</a></dd>
+{{extra_contact}}        </dl>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© <span id="y">2026</span> Madi Popescu</div>
+    <div class="wrap">© <span id="y">2026</span> {{name}}</div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
