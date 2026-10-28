@@ -1,16 +1,16 @@
 # Videouri lungi de duminică – 13 săptămâni (25 oct 2026 – 17 ian 2027)
 
-Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămânii vine din Shorturile zilnice. Nu promitem efecte medicale: muzica e pentru relaxare, studiu și destindere.
+Un video lung pe săptămână, cu descriere completă EN + RO. Temele sunt diferite de cele ale Shorturilor zilnice. Nu promitem efecte medicale: muzica e pentru relaxare, studiu și destindere.
 
 ## Săptămâna 1 – duminică 25 oct
 
-**Titlu EN:** Gentle Forest Rain & Soft Piano | 3 Hours
-**Titlu RO:** Ploaie ușoară în pădure și pian blând | 3 ore
+**Titlu EN:** Rain Over a Quiet Lake & Soft Piano | 3 Hours
+**Titlu RO:** Ploaie peste un lac liniștit și pian blând | 3 ore
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 Rain taps softly on a thousand leaves while a slow piano melody drifts beneath it. 3 hours of rain in the forest to help you slow down, breathe and unwind.
+🌿 Rain ripples a still lake while a slow piano melody drifts beneath it. 3 hours of rain over a quiet lake to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -33,7 +33,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Ploaia atinge încet mii de frunze, iar o melodie lentă de pian plutește sub ea. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Ploaia unduiește un lac nemișcat, iar o melodie lentă de pian plutește sub ea. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -104,13 +104,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 3 – duminică 8 nov
 
-**Titlu EN:** Jungle Waterfall & Soft Piano | 2 Hours
-**Titlu RO:** Cascadă în junglă și pian blând | 2 ore
+**Titlu EN:** Green Canyon Waterfalls & Soft Piano | 2 Hours
+**Titlu RO:** Cascade într-un canion verde și pian blând | 2 ore
 **Durată:** 2 hours
 
 ### Descriere (EN)
 
-🌿 A tall waterfall pours into a green pool, wrapped in warm light and gentle piano. 2 hours of jungle waterfall to help you slow down, breathe and unwind.
+🌿 Waterfalls pour down mossy canyon walls, wrapped in warm light and gentle piano. 2 hours of green canyon waterfalls to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -133,7 +133,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 O cascadă înaltă se varsă într-un lac verde, învelită în lumină caldă și pian blând. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Cascade curg pe pereții unui canion acoperit de mușchi, învelite în lumină caldă și pian blând. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -154,13 +154,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 4 – duminică 15 nov
 
-**Titlu EN:** Autumn Forest Stream & Piano | 3 Hours of Calm
-**Titlu RO:** Pârâu prin pădurea de toamnă și pian | 3 ore de calm
+**Titlu EN:** Autumn Park Falling Leaves & Piano | 3 Hours of Calm
+**Titlu RO:** Frunze căzând într-un parc de toamnă și pian | 3 ore de calm
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 A clear stream winds through golden leaves, with soft piano carrying you along. 3 hours of autumn forest stream to help you slow down, breathe and unwind.
+🌿 Golden leaves fall slowly through soft light, with piano that matches their pace. 3 hours of autumn leaves in a quiet park to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -183,7 +183,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Un pârâu limpede șerpuiește printre frunze aurii, iar pianul blând te poartă mai departe. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Frunze aurii cad încet prin lumină blândă, iar pianul le urmează ritmul. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -204,13 +204,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 5 – duminică 22 nov
 
-**Titlu EN:** Tropical Beach Sunset & Calm Piano | 2 Hours
-**Titlu RO:** Plajă tropicală la apus și pian calm | 2 ore
+**Titlu EN:** Calm Tropical Bay & Palm Shade Piano | 2 Hours
+**Titlu RO:** Golf tropical calm la umbra palmierilor și pian | 2 ore
 **Durată:** 2 hours
 
 ### Descriere (EN)
 
-🌿 Warm sky, slow tide and palm shadows, with a quiet piano to close the day. 2 hours of tropical beach sunset to help you slow down, breathe and unwind.
+🌿 Still water, palm shade and a slow tide, with quiet piano to close the day. 2 hours of a calm tropical bay to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -233,7 +233,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Cer cald, maree lentă și umbre de palmieri, cu un pian liniștit care încheie ziua. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Apă liniștită, umbră de palmieri și maree lentă, cu un pian discret care încheie ziua. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -254,13 +254,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 6 – duminică 29 nov
 
-**Titlu EN:** Bamboo Forest & Zen Garden Piano | 3 Hours
-**Titlu RO:** Pădure de bambus și pian zen | 3 ore
+**Titlu EN:** Quiet Temple Garden & Zen Piano | 3 Hours
+**Titlu RO:** Grădină liniștită de templu și pian zen | 3 ore
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 Light moves through bamboo and a raked sand garden, with spacious, meditative piano. 3 hours of zen garden & bamboo to help you slow down, breathe and unwind.
+🌿 Stone paths, still water and soft light, with spacious, meditative piano. 3 hours of a quiet temple garden to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -283,7 +283,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Lumina se mișcă prin bambus și o grădină zen cu nisip, iar pianul spațios invită la meditație. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Alei de piatră, apă nemișcată și lumină blândă, cu pian spațios, meditativ. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -304,13 +304,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 7 – duminică 6 dec
 
-**Titlu EN:** Misty Lake Sunrise & Gentle Piano | 3 Hours
-**Titlu RO:** Lac în ceață la răsărit și pian blând | 3 ore
+**Titlu EN:** Foggy Morning Meadow & Gentle Piano | 3 Hours
+**Titlu RO:** Pajiște în ceață dimineața și pian blând | 3 ore
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 Mist lifts off a still lake as the first light arrives, with soft piano for a slow morning. 3 hours of misty lake at sunrise to help you slow down, breathe and unwind.
+🌿 Mist lifts off a quiet meadow as the first light arrives, for a slow morning. 3 hours of a foggy morning meadow to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -333,7 +333,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Ceața se ridică de pe un lac nemișcat când sosește prima lumină, cu pian blând pentru o dimineață lentă. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Ceața se ridică de pe o pajiște liniștită când sosește prima lumină, pentru o dimineață lentă. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -360,7 +360,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (EN)
 
-🌿 Warm evening light settles over a quiet meadow, with piano that feels like a deep breath. 2 hours of golden hour meadow to help you slow down, breathe and unwind.
+🌿 Warm evening light settles over a quiet meadow, with piano that feels like a deep breath. 2 hours of a golden hour meadow to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -404,13 +404,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 9 – duminică 20 dec
 
-**Titlu EN:** Turquoise Lagoon & Calm Piano | 2 Hours
-**Titlu RO:** Lagună turcoaz și pian calm | 2 ore
+**Titlu EN:** Crystal Clear Bay & Calm Piano | 2 Hours
+**Titlu RO:** Golf cu apă cristalină și pian calm | 2 ore
 **Durată:** 2 hours
 
 ### Descriere (EN)
 
-🌿 Clear shallow water over white sand, with relaxing piano and the sound of tiny waves. 2 hours of turquoise lagoon to help you slow down, breathe and unwind.
+🌿 Clear shallow water over pale sand, with relaxing piano and the sound of tiny waves. 2 hours of a crystal-clear bay to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -433,7 +433,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Apă limpede și puțin adâncă peste nisip alb, cu pian relaxant și sunetul valurilor mici. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Apă limpede și puțin adâncă peste nisip deschis, cu pian relaxant și sunetul valurilor mici. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -454,13 +454,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 10 – duminică 27 dec
 
-**Titlu EN:** Peaceful Ocean Horizon & Piano | 3 Hours to Unwind
-**Titlu RO:** Orizont liniștit peste ocean și pian | 3 ore de destindere
+**Titlu EN:** Slow Ocean Tides & Piano | 3 Hours to Unwind
+**Titlu RO:** Maree lentă a oceanului și pian | 3 ore de destindere
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 A wide, calm horizon at the end of the year, with slow piano to help you unwind. 3 hours of peaceful ocean horizon to help you slow down, breathe and unwind.
+🌿 Slow tides at the end of the year, with gentle piano to help you unwind. 3 hours of slow ocean tides to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -483,7 +483,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Un orizont larg și calm la sfârșit de an, cu pian lent care te ajută să te destinzi. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Maree lentă la sfârșit de an, cu pian blând care te ajută să te destinzi. 3 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -504,13 +504,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 11 – duminică 3 ian
 
-**Titlu EN:** Cherry Blossom Garden & Soft Piano | 2 Hours
-**Titlu RO:** Grădină cu cireși înfloriți și pian blând | 2 ore
+**Titlu EN:** Pink Magnolia Garden Path & Soft Piano | 2 Hours
+**Titlu RO:** Alee cu magnolii roz și pian blând | 2 ore
 **Durată:** 2 hours
 
 ### Descriere (EN)
 
-🌿 Pink petals drift through a quiet garden, a gentle start for the new year. 2 hours of cherry blossom garden to help you slow down, breathe and unwind.
+🌿 Pink petals line a quiet garden path, a gentle start for the new year. 2 hours of a pink magnolia garden path to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -533,7 +533,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (RO)
 
-🌿 Petale roz plutesc printr-o grădină liniștită, un început blând de an nou. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
+🌿 Petale roz mărginesc o alee liniștită de grădină, un început blând de an nou. 2 ore de relaxare ca să încetinești, să respiri și să te destinzi.
 
 ✨ Potrivit pentru: somn, studiu, muncă, meditație, yoga, citit sau o seară liniștită.
 
@@ -554,13 +554,13 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Săptămâna 12 – duminică 10 ian
 
-**Titlu EN:** Clear Mountain River & Calm Piano | 3 Hours
-**Titlu RO:** Râu de munte cu apă limpede și pian calm | 3 ore
+**Titlu EN:** Forest River Over Smooth Stones & Piano | 3 Hours
+**Titlu RO:** Râu de pădure peste pietre netede și pian | 3 ore
 **Durată:** 3 hours
 
 ### Descriere (EN)
 
-🌿 Cool water runs over smooth stones, with piano that keeps a steady, soothing pace. 3 hours of clear mountain river to help you slow down, breathe and unwind.
+🌿 Cool water runs over smooth stones, with piano that keeps a steady, soothing pace. 3 hours of a forest river over smooth stones to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -610,7 +610,7 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ### Descriere (EN)
 
-🌿 A softly lit shore at night with slow waves and the quietest piano in the series. 3 hours of deep sleep piano & ocean to help you slow down, breathe and unwind.
+🌿 A softly lit shore at night with slow waves and the quietest piano in the series. 3 hours of deep sleep piano and ocean to help you slow down, breathe and unwind.
 
 ✨ Perfect for: sleep, study, work, meditation, yoga, reading or a quiet evening.
 
@@ -654,7 +654,6 @@ Un video lung pe săptămână, cu descriere completă EN + RO. Tema săptămân
 
 ## Ce Shorturi să faci întâi (zilele 8–30, după cele 7 făcute)
 
-Cu cea mai mare cerere de căutare și cel mai ușor de făcut, în ordinea asta:
 1. 9 nov – Pădure de bambus
 2. 5 nov – Cascade în munți verzi
 3. 7 nov – Grădină japoneză cu arțari roșii
@@ -664,4 +663,4 @@ Cu cea mai mare cerere de căutare și cel mai ușor de făcut, în ordinea asta
 7. 3 nov – Lac cu nuferi
 8. 8 nov – Țărm cu stânci și apă cristalină
 
-Apoi restul, în ordinea din `shorts-90-zile.md`. Poți face mai multe într-o zi (5 poze + melodie) și le programezi pe data lor.
+Apoi restul, în ordinea din `shorts-90-zile.md`.
