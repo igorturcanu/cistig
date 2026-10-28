@@ -4,7 +4,7 @@ Adds a system prompt section so that after you correct Claude or state a prefere
 
 ## Install
 
-Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/reflect`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/reflect`.
+`/plugin install reflect --marketplace igorturcanu/cistig`, or Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/reflect`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/reflect`.
 
 ## Remove
 

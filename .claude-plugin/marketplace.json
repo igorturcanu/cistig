@@ -1,0 +1,38 @@
+{
+  "name": "cistig",
+  "owner": {
+    "name": "igorturcanu"
+  },
+  "plugins": [
+    {
+      "name": "blast-radius",
+      "source": "./mods/blast-radius",
+      "description": "Asks for confirmation before destructive Bash commands"
+    },
+    {
+      "name": "done-ding",
+      "source": "./mods/done-ding",
+      "description": "Toast and status when Claude finishes a turn"
+    },
+    {
+      "name": "next-steps",
+      "source": "./mods/next-steps",
+      "description": "Makes Claude end each answer with suggested next steps"
+    },
+    {
+      "name": "reflect",
+      "source": "./mods/reflect",
+      "description": "Makes Claude propose CLAUDE.md rules when you correct it"
+    },
+    {
+      "name": "secret-guard",
+      "source": "./mods/secret-guard",
+      "description": "Blocks Claude from writing or running anything that contains API keys, tokens or private keys"
+    },
+    {
+      "name": "token-weather",
+      "source": "./mods/token-weather",
+      "description": "Shows context-window fill as a weather forecast in the status line"
+    }
+  ]
+}

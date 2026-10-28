@@ -4,7 +4,7 @@ Asks for your confirmation before Claude runs destructive Bash commands such as 
 
 ## Install
 
-Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/blast-radius`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/blast-radius`.
+`/plugin install blast-radius --marketplace igorturcanu/cistig`, or Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/blast-radius`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/blast-radius`.
 
 ## Remove
 

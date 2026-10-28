@@ -4,7 +4,7 @@ Shows a toast with the turn duration whenever Claude finishes answering, so you 
 
 ## Install
 
-Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/done-ding`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/done-ding`.
+`/plugin install done-ding --marketplace igorturcanu/cistig`, or Copy this folder into your mods folder, or load it for a session with `claude --plugin-dir ./mods/done-ding`. It hot-reloads when its files change. Check it with `claude plugin validate ./mods/done-ding`.
 
 ## Remove
 
