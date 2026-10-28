@@ -2,6 +2,7 @@
 """Genereaza prompturile pentru Gemini pentru un video lung (clipuri + melodii).
 
 Exemple:
+  python3 gemini_prompt.py --tema ocean --tip imagini --clipuri 30 --durata 12 --melodii 6
   python3 gemini_prompt.py --tema ocean --clipuri 16 --melodii 6
   python3 gemini_prompt.py --tema "waterfall" --clipuri 24 --durata 10 --melodii 8 --instrument handpan
   python3 gemini_prompt.py --tema "autumn park" --titlu "Autumn Park & Piano | 3 Hours"   # tema libera
@@ -42,16 +43,20 @@ def scenes(theme, n):
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--tema", required=True, help=f"una din {', '.join(THEMES)} sau text liber")
-    p.add_argument("--clipuri", type=int, default=16, help="cate clipuri video (implicit 16)")
-    p.add_argument("--durata", type=int, default=8, help="secunde per clip (implicit 8)")
+    p.add_argument("--tip", default="clipuri", choices=["clipuri", "imagini"], help="clipuri video (Veo, limitat) sau imagini (mai usor de generat; le animez cu zoom lent)")
+    p.add_argument("--clipuri", type=int, default=16, help="cate clipuri sau imagini (implicit 16)")
+    p.add_argument("--durata", type=int, default=0, help="secunde per clip (implicit 8) sau per imagine in video (implicit 12)")
     p.add_argument("--melodii", type=int, default=6, help="cate melodii (implicit 6)")
     p.add_argument("--durata-melodie", type=int, default=150, help="secunde per melodie (implicit 150)")
     p.add_argument("--instrument", default="piano", choices=["piano", "handpan", "guitar", "flute"], help="instrument (implicit piano)")
     p.add_argument("--titlu", default="", help="titlul videoului (doar pentru antet)")
     p.add_argument("--out", default="", help="fisier de iesire .md (implicit prompt-<tema>.md)")
     a = p.parse_args()
-    if a.clipuri < 1 or a.melodii < 0 or a.durata < 1:
-        sys.exit("clipuri, durata >= 1 si melodii >= 0")
+    if a.clipuri < 1 or a.melodii < 0 or a.durata < 0:
+        sys.exit("clipuri >= 1, durata >= 1 si melodii >= 0")
+    img = a.tip == "imagini"
+    if a.durata == 0:
+        a.durata = 12 if img else 8
     label, sc = scenes(a.tema, a.clipuri)
     name = a.out or f"prompt-{a.tema.lower().strip().replace(' ', '-')}.md"
     inst = {"piano": "calm piano with soft ambient pads", "handpan": "relaxing handpan melody with soft ambient pads",
@@ -61,18 +66,28 @@ def main():
     L = []
     w = L.append
     w(f"# Prompturi Gemini: {a.titlu or label}\n")
-    w(f"Tema: **{label}** · {a.clipuri} clipuri x {a.durata} s (~{total_clip // 60} min {total_clip % 60} s unice) · {a.melodii} melodii x ~{mins} min {secs} s ({a.instrument})\n")
+    w(f"Tema: **{label}** · {a.clipuri} {'imagini' if img else 'clipuri'} x {a.durata} s (~{total_clip // 60} min {total_clip % 60} s unice) · {a.melodii} melodii x ~{mins} min {secs} s ({a.instrument})\n")
     w("Clipurile si muzica generate cu Gemini sunt create cu AI: scrie asta in descriere si bifeaza „Altered content”.\n")
-    w("## 1) CLIPURI: lipesti tot blocul de mai jos O SINGURA DATA\n")
+    w(("## 1) IMAGINI" if img else "## 1) CLIPURI") + ": lipesti tot blocul de mai jos O SINGURA DATA\n")
     w("Apoi, dupa fiecare clip, scrii doar `next`. Nu mai repeti nimic.\n")
     w("```")
-    w(f"You are generating {a.clipuri} separate {a.durata}-second 16:9 horizontal photorealistic nature video clips for a relaxing music channel. Theme: {label}.")
-    w("Rules for EVERY clip: no people, no text, no logos, no watermarks, soft natural light, warm vivid colors, calm peaceful mood, no snow, no dark scenes, slow gentle camera movement or a still camera, no fast motion, no cuts inside a clip.")
-    w(f"Make exactly ONE clip at a time, in the order below. After each clip, wait until I write \"next\", then make the next one. Do not repeat a scene. Clip numbers must match the list.\n")
-    for i, s in enumerate(sc, 1):
-        w(f"{i:02d}. {s}")
+    if img:
+        w(f"You are generating {a.clipuri} separate 16:9 horizontal photorealistic nature IMAGES (not video, not text) for a relaxing music channel. Theme: {label}.")
+        w("Rules for EVERY image: no people, no text, no logos, no watermarks, soft natural light, warm vivid colors, calm peaceful mood, no snow, no dark scenes, sharp high detail, natural composition.")
+        w("Make exactly ONE image at a time, in the order below. After each image, wait until I write \"next\", then make the next one. Do not repeat a scene. Image numbers must match the list.\n")
+        for i, s_ in enumerate(sc, 1):
+            w(f"{i:02d}. {s_.rsplit(',', 1)[0]}")
+    else:
+        w(f"You are generating {a.clipuri} separate {a.durata}-second 16:9 horizontal photorealistic nature video clips for a relaxing music channel. Theme: {label}.")
+        w("Rules for EVERY clip: no people, no text, no logos, no watermarks, soft natural light, warm vivid colors, calm peaceful mood, no snow, no dark scenes, slow gentle camera movement or a still camera, no fast motion, no cuts inside a clip.")
+        w(f"Make exactly ONE clip at a time, in the order below. After each clip, wait until I write \"next\", then make the next one. Do not repeat a scene. Clip numbers must match the list.\n")
+        for i, s_ in enumerate(sc, 1):
+            w(f"{i:02d}. {s_}")
     w("```\n")
-    w("Salveaza clipurile ca " + ", ".join(f"`{i:02d}.mp4`" for i in (1, 2)) + f" … `{a.clipuri:02d}.mp4` in folderul `clipuri/`.\n")
+    ext = "jpg" if img else "mp4"
+    w(("Salveaza imaginile ca " if img else "Salveaza clipurile ca ") + ", ".join(f"`{i:02d}.{ext}`" for i in (1, 2)) + f" … `{a.clipuri:02d}.{ext}` in folderul `clipuri/`.\n")
+    if img:
+        w("Daca Gemini te intreaba sau raspunde doar cu text, scrie: `Generate the image now.`\n")
     if a.melodii:
         w("## 2) MUZICA: lipesti blocul O SINGURA DATA, apoi `next`\n")
         w("```")
@@ -84,9 +99,12 @@ def main():
         w(f"Salveaza ca `01.mp3` … `{a.melodii:02d}.mp3` in folderul `muzica/`.\n")
     w("## 3) Asamblare (pe calculatorul tau, cu ffmpeg)\n")
     w("```")
-    w("SLOW=2 ./build_3h.sh clipuri/ muzica/ video-3h.mp4")
+    w((f"IMGDUR={a.durata} " if img else "SLOW=2 ") + "./build_3h.sh clipuri/ muzica/ video-3h.mp4")
     w("```\n")
-    w(f"Cu {a.clipuri} clipuri de {a.durata} s ai ~{total_clip // 60} min {total_clip % 60} s unice; `SLOW=2` le dubleaza. Cu mai multe clipuri video-ul se repeta mai putin vizibil.\n")
+    if img:
+        w(f"Cu {a.clipuri} imagini x {a.durata} s ai ~{total_clip // 60} min {total_clip % 60} s unice (fiecare imagine primeste un zoom lent). Mai multe imagini = repetare mai putin vizibila.\n")
+    else:
+        w(f"Cu {a.clipuri} clipuri de {a.durata} s ai ~{total_clip // 60} min {total_clip % 60} s unice; `SLOW=2` le dubleaza. Cu mai multe clipuri video-ul se repeta mai putin vizibil.\n")
     open(name, "w", encoding="utf-8").write("\n".join(L))
     print(f"Scris: {name} ({a.clipuri} clipuri, {a.melodii} melodii)")
 

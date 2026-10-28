@@ -69,3 +69,11 @@ Atenție: segmentul de bază (toate clipurile puse una după alta) se repetă î
 `python3 gemini_prompt.py --tema ocean --clipuri 16 --durata 8 --melodii 6 --instrument piano`
 
 Scrie un fișier cu un prompt pentru clipuri și unul pentru muzică, fiecare cu toată lista de scene sau melodii. Lipești fiecare bloc o singură dată în Gemini, apoi scrii doar `next`. Teme gata făcute: ocean, waterfall, lake, mountain, forest, meadow, beach; orice altă temă se scrie liber. `python3 gemini_prompt.py --help` arată toate opțiunile.
+
+## Variantă cu imagini (mai ușor de obținut din Gemini)
+
+Dacă Gemini nu îți dă clipuri video sau te limitează, cere imagini:
+
+`python3 gemini_prompt.py --tema ocean --tip imagini --clipuri 30 --melodii 6`
+
+Salvezi imaginile ca `01.jpg`… în `clipuri/`. Scriptul `build_3h.sh` le primește direct (alături de clipuri) și le animează cu zoom lent: `IMGDUR=12 ./build_3h.sh clipuri/ muzica/ video-3h.mp4`. Testat cu imagini și clipuri sintetice, nu cu imagini Gemini.
