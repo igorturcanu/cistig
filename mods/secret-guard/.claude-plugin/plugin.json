@@ -1,0 +1,1 @@
+{ "name": "secret-guard", "version": "0.1.0", "description": "Blocks Claude from writing or running anything that contains API keys, tokens or private keys", "license": "MIT" }
