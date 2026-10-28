@@ -63,3 +63,9 @@ Atenție: segmentul de bază (toate clipurile puse una după alta) se repetă î
 - Nu bifa „Altered content” doar dacă muzica și imaginile sunt reale; dacă ai folosit AI pentru ceva, bifează.
 - Pune în comentariul fixat linkurile clipurilor Pexels.
 - Miniatura: un cadru real, luminos, cu textul „3 HOURS” mare.
+
+## Generator de prompturi pentru Gemini
+
+`python3 gemini_prompt.py --tema ocean --clipuri 16 --durata 8 --melodii 6 --instrument piano`
+
+Scrie un fișier cu un prompt pentru clipuri și unul pentru muzică, fiecare cu toată lista de scene sau melodii. Lipești fiecare bloc o singură dată în Gemini, apoi scrii doar `next`. Teme gata făcute: ocean, waterfall, lake, mountain, forest, meadow, beach; orice altă temă se scrie liber. `python3 gemini_prompt.py --help` arată toate opțiunile.
